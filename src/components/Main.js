@@ -1,64 +1,12 @@
-import React from 'react';
+import React from "react";
+import Visor from "./Visor";
 
 class Main extends React.Component {
-  render(){
-     return (
+  render() {
+    return (
       <div className="container__main">
         <main className="page__main">
-          <section className="visor">
-            <button className="reset">
-              <div className="reset__icon">
-                <i className="far fa-trash-alt" />
-              </div>
-              <p className="reset__text">RESET</p>
-            </button>
-            <div className="card">
-              <div className="card__head">
-                <div className="card__head--border">
-                  <div className="card__head--container">
-                    <div className="card__name">
-                      <p className="card__name--name" id="element-name">
-                        Nombre Apellido
-                      </p>
-                      <div className="card__job">
-                        <p className="card__job--job" id="element-role">
-                          {" "}
-                          Descripción
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="card__pic" />
-
-              <div className="card__foot">
-                <div className="card__foot--social">
-                  <div className="card__foot--icon mobile">
-                    <a href="" className="mobileLink">
-                      <i className="iconsocial fas fa-mobile-alt" />
-                    </a>
-                  </div>
-                  <div className="card__foot--icon email">
-                    <a href="" className="emailLink">
-                      <i className="iconsocial far fa-envelope" />
-                    </a>
-                  </div>
-                  <div className="card__foot--icon linkedin">
-                    <a href="" className="linkedinLink">
-                      <i className="iconsocial fab fa-linkedin-in" />
-                    </a>
-                  </div>
-                  <div className="card__foot--icon github">
-                    <a href="" className="githubLink">
-                      <i className="iconsocial fab fa-github-alt" />
-                    </a>
-                  </div>
-                </div>
-                <div className="card__foot--skills" />
-              </div>
-            </div>
-          </section>
+          <Visor />
           <section className="editor">
             <fieldset className="fieldset__rellena div__rellena collapsible">
               <div className="fieldset__container--title">
@@ -182,7 +130,9 @@ class Main extends React.Component {
                   </label>
                   <div className="div__imagen">
                     <div className="añadir">
-                      <button className="añadir__upload-btn">Añadir imagen</button>
+                      <button className="añadir__upload-btn">
+                        Añadir imagen
+                      </button>
                       <input
                         type="file"
                         name=""
@@ -245,54 +195,54 @@ class Main extends React.Component {
                   <label
                     className="fieldset__rellena--label label__habilidades"
                     for="habilidades"
-                    >
-                      Habilidades (máximo 3)
-                    </label>
-                    <div className="fieldset__div--habilidades">
-                      <div className="div__habilidades">
-                        <select className="select__habilidades select__habilidades1" />
-                        <div className="button__add-select--container">
-                          <i className="fas fa-plus button__add-select button__add-select1" />
-                        </div>
+                  >
+                    Habilidades (máximo 3)
+                  </label>
+                  <div className="fieldset__div--habilidades">
+                    <div className="div__habilidades">
+                      <select className="select__habilidades select__habilidades1" />
+                      <div className="button__add-select--container">
+                        <i className="fas fa-plus button__add-select button__add-select1" />
                       </div>
                     </div>
-                    <div className="fieldset__div--habilidades-new" />
                   </div>
+                  <div className="fieldset__div--habilidades-new" />
                 </div>
-              </fieldset>
+              </div>
+            </fieldset>
 
-              {/* <!-- Rellena -->
+            {/* <!-- Rellena -->
                 <!-- Comparte --> */}
 
-                <fieldset className="div__rellena collapsible fieldset__rellena fieldset--invisible">
-                  <div className="fieldset__container--title">
-                    <span className="fieldset__rellena--keyboard">
-                      <i className="fas fa-share-alt" />
-                      <h2 className="fieldset__title">Comparte</h2>
+            <fieldset className="div__rellena collapsible fieldset__rellena fieldset--invisible">
+              <div className="fieldset__container--title">
+                <span className="fieldset__rellena--keyboard">
+                  <i className="fas fa-share-alt" />
+                  <h2 className="fieldset__title">Comparte</h2>
+                </span>
+                <span className="fieldset__rellena--arrow collapsible__label">
+                  <i className="fas fa-angle-up rotate" />
+                </span>
+              </div>
+              <div className="collapsible__content div__editor--inner">
+                <div className="fieldset__share--button">
+                  <button
+                    id="submit"
+                    type="button"
+                    className="fieldset__share--button"
+                  >
+                    <span className="fieldset__share--button--icon">
+                      <i className="far fa-address-card" />
                     </span>
-                    <span className="fieldset__rellena--arrow collapsible__label">
-                      <i className="fas fa-angle-up rotate" />
+                    <span className="fieldset__share--button--text uppercase">
+                      Crear tarjeta
                     </span>
-                  </div>
-                  <div className="collapsible__content div__editor--inner">
-                    <div className="fieldset__share--button">
-                      <button
-                        id="submit"
-                        type="button"
-                        className="fieldset__share--button"
-                        >
-                          <span className="fieldset__share--button--icon">
-                            <i className="far fa-address-card" />
-                          </span>
-                          <span className="fieldset__share--button--text uppercase">
-                            Crear tarjeta
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                  </fieldset>
-                </section>
-              </main>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+        </main>
       </div>
     );
   }
