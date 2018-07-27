@@ -6,16 +6,19 @@ class App extends Component {
   constructor(props){
     super(props);
 
-    this.copyright={
+    this.footer={
       texto:'Awesome profile-cards ©2018',
       image: logoAda,
       href: 'http://www.adalab.es'
+    }
+    this.form={
+      titulos: ['Diseña', 'Rellena', 'Comparte']
     }
   }
   render() {
     return (
       <div className="App">
-        <Pag copyright={this.copyright.texto} image={this.copyright.image} href={this.copyright.href}/>
+        <Pag copyright={this.footer.texto} image={this.footer.image} href={this.footer.href} titulos={this.form.titulos}/>
       </div>
     );
   }

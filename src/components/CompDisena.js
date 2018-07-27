@@ -7,7 +7,7 @@ class CompDisena extends React.Component {
         <div className="fieldset__container--title">
           <span className="fieldset__rellena--keyboard">
             <i className="far fa-object-ungroup" />
-            <h2 className="fieldset__title">Diseña</h2>
+            <h2 className="fieldset__title">{this.props.tituloDisena}</h2>
           </span>
           <span className="fieldset__rellena--arrow collapsible__label">
             <i className="fas fa-angle-up rotate" />

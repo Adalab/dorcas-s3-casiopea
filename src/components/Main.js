@@ -59,7 +59,7 @@ class Main extends React.Component {
               </div>
             </div>
           </section>
-          <Form />
+          <Form title={this.props.titulo}/>
               </main>
       </div>
     );
