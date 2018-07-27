@@ -10,7 +10,7 @@ class Pag extends React.Component {
       <div className="container__all">
         <Header />
         <Main />
-        <Footer copy={this.props.copyright} img={this.props.image}/>
+        <Footer copy={this.props.copyright} img={this.props.image} href={this.props.href}/>
       </div>
     );
   }

@@ -8,13 +8,14 @@ class App extends Component {
 
     this.copyright={
       texto:'Awesome profile-cards ©2018',
-      image: logoAda
+      image: logoAda,
+      href: 'http://www.adalab.es'
     }
   }
   render() {
     return (
       <div className="App">
-        <Pag copyright={this.copyright.texto} image={this.copyright.image} />
+        <Pag copyright={this.copyright.texto} image={this.copyright.image} href={this.copyright.href}/>
       </div>
     );
   }
