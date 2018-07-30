@@ -5,24 +5,30 @@ import logoAda from './images/logo-adalab-80px.png';
 class App extends Component {
   constructor(props){
     super(props);
-
-    this.footer={
-      texto:'Awesome profile-cards ©2018',
-      image: logoAda,
-      href: 'http://www.adalab.es'
-    }
-    this.form={
-      titulos: {
-        nombreDisena: 'Diseña',
-        nombreRellena: 'Rellena',
-        nombreComparte: 'Comparte'
+    this.state={
+      footer:{
+        texto:'Awesome profile-cards ©2018',
+        image: logoAda,
+        href: 'http://www.adalab.es'
+      },
+      form:{
+        titulos: {
+          nombreDisena: 'Diseña',
+          nombreRellena: 'Rellena',
+          nombreComparte: 'Comparte'
+        }
       }
     }
   }
+pulsa(){
+  alert('Has pulsado botón putón');
+}
   render() {
+
     return (
       <div className="App">
-        <Pag copyright={this.footer.texto} image={this.footer.image} href={this.footer.href} titulos={this.form.titulos}/>
+        <button className="botonPuto"  onClick={this.pulsa}>BotonPuton!</button>
+        <Pag copyright={this.state.footer.texto} image={this.state.footer.image} href={this.state.footer.href} titulos={this.state.form.titulos}/>
       </div>
     );
   }
