@@ -30,6 +30,9 @@ class App extends Component {
   escribe() {
     alert("Muy bien escrito");
   }
+  escatologia(){
+    alert("culo");
+  }
 
   render() {
     return (
@@ -42,6 +45,7 @@ class App extends Component {
           BotonPuton!
         </button>
         <input onKeyUp={this.escribe} type="text"/>
+        <input onKeyUp={this.escatologia} type="text" />
         <Pag
           copyright={this.state.footer.texto}
           image={this.state.footer.image}
