@@ -26,6 +26,11 @@ class App extends Component {
   muestra() {
     alert("Muy bien chata");
   }
+
+  escribe() {
+    alert("Muy bien escrito");
+  }
+
   render() {
     return (
       <div className="App">
@@ -36,6 +41,7 @@ class App extends Component {
         >
           BotonPuton!
         </button>
+        <input onKeyUp={this.escribe} type="text"/>
         <Pag
           copyright={this.state.footer.texto}
           image={this.state.footer.image}
