@@ -12,7 +12,11 @@ class App extends Component {
       href: 'http://www.adalab.es'
     }
     this.form={
-      titulos: ['Diseña', 'Rellena', 'Comparte']
+      titulos: {
+        nombreDisena: 'Diseña',
+        nombreRellena: 'Rellena',
+        nombreComparte: 'Comparte'
+      }
     }
   }
   render() {

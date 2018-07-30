@@ -6,9 +6,9 @@ class Form extends React.Component {
   render(){
     return (
           <section className="editor">
-            <CompDisena tituloDisena={this.props.title[0]}/>
-            <CompRellena />
-            <CompComparte />
+            <CompDisena tituloDisena={this.props.title.nombreDisena}/>
+            <CompRellena tituloRellena={this.props.title.nombreRellena} />
+            <CompComparte tituloComparte={this.props.title.nombreComparte} />
           </section>
     );
   }
