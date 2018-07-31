@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 class CompRellena extends React.Component {
   render(){
     return (
@@ -114,15 +116,20 @@ class CompRellena extends React.Component {
               </label>
               <div className="fieldset__div--habilidades">
                 <div className="div__habilidades">
-                  <select className="select__habilidades select__habilidades1" />
-                  <div className="button__add-select--container">
-                    <i className="fas fa-plus button__add-select button__add-select1" />
+                  <select className="select__habilidades select__habilidades1">
+                    <option value="HTML"></option>
+                    <option value="CSS"></option>
+                    <option value="JavaScript"></option>
+                    <option value="React"></option>
+                  </select>
+                  {/* <div className="button__add-select--container">
+                    <i className="fas fa-plus button__add-select button__add-select1" /> */}
                   </div>
                 </div>
               </div>
               <div className="fieldset__div--habilidades-new" />
             </div>
-          </div>
+          {/* </div> */}
         </fieldset>
       );
     }

@@ -17,6 +17,14 @@ class App extends Component {
           nombreRellena: "Rellena",
           nombreComparte: "Comparte"
         }
+      },
+      skills: {
+        habilidades: {
+          skillHTML: "HTML",
+          skillCSS: "CSS",
+          skillJavaScript: "JavaScript",
+          skillReact: "React"
+        }
       }
     };
     
@@ -52,6 +60,7 @@ class App extends Component {
           image={this.state.footer.image}
           href={this.state.footer.href}
           titulos={this.state.form.titulos}
+          seleccion={this.state.skills.habilidades}
         />
       </div>
     );
