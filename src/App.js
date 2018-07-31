@@ -19,6 +19,7 @@ class App extends Component {
         }
       }
     };
+    
   }
   pulsa() {
     alert("Has pulsado botón putón");
