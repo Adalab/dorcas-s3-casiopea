@@ -13,7 +13,7 @@ class CompComparte extends React.Component {
             <i className="fas fa-angle-up rotate" />
           </span>
         </div>
-        <div className="collapsible__content div__editor--inner">
+        <div className=" div__editor--inner">{/* collapsible__content */}
           <div className="fieldset__share--button">
             <button
               id="submit"
