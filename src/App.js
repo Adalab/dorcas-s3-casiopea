@@ -18,18 +18,26 @@ class App extends Component {
           nombreComparte: "Comparte"
         }
       },
-      skills: [
-
-           "HTML",
-           "CSS",
-           "JavaScript",
-           "React"
-           ]
+      skills: []
       }
+    this.callApi = this.callApi.bind(this);
+    this.callApi();
     };
 
-
-
+  callApi () {
+    fetch (
+      "https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json"
+    )
+    .then (function (response) {
+      return response.json();
+    })
+    .then ((json) => {
+      const habilidades = json.skills;
+      this.setState ({
+        skills: habilidades
+      })
+    })
+  }
 
   render() {
     return (
