@@ -117,10 +117,11 @@ class CompRellena extends React.Component {
               <div className="fieldset__div--habilidades">
                 <div className="div__habilidades">
                   <select className="select__habilidades select__habilidades1">
-                    <option value="HTML"></option>
-                    <option value="CSS"></option>
-                    <option value="JavaScript"></option>
-                    <option value="React"></option>
+                  {this.props.sect.map(function(item){
+                    return (
+                      <option value={item}>{item}</option>
+                    )
+                  })}
                   </select>
                   {/* <div className="button__add-select--container">
                     <i className="fas fa-plus button__add-select button__add-select1" /> */}

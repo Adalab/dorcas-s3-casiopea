@@ -18,17 +18,17 @@ class App extends Component {
           nombreComparte: "Comparte"
         }
       },
-      skills: {
-        habilidades: {
-          skillHTML: "HTML",
-          skillCSS: "CSS",
-          skillJavaScript: "JavaScript",
-          skillReact: "React"
-        }
+      skills: [
+
+           "HTML",
+           "CSS",
+           "JavaScript",
+           "React"
+           ]
       }
     };
 
-  }
+
 
 
   render() {
