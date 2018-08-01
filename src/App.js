@@ -27,7 +27,7 @@ class App extends Component {
         }
       }
     };
-    
+
   }
   pulsa() {
     alert("Has pulsado botón putón");
@@ -60,7 +60,7 @@ class App extends Component {
           image={this.state.footer.image}
           href={this.state.footer.href}
           titulos={this.state.form.titulos}
-          seleccion={this.state.skills.habilidades}
+          seleccion={this.state.skills}
         />
       </div>
     );
