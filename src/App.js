@@ -27,34 +27,14 @@ class App extends Component {
         }
       }
     };
-    
-  }
-  pulsa() {
-    alert("Has pulsado botón putón");
-  }
-  muestra() {
-    alert("Muy bien chata");
+
   }
 
-  escribe() {
-    alert("Muy bien escrito");
-  }
-  escatologia(){
-    alert("culo");
-  }
 
   render() {
     return (
       <div className="App">
-        <button
-          className="botonPuto"
-          onMouseOut={this.muestra}
-          onClick={this.pulsa}
-        >
-          BotonPuton!
-        </button>
-        <input onKeyUp={this.escribe} type="text"/>
-        <input onKeyUp={this.escatologia} type="text" />
+
         <Pag
           copyright={this.state.footer.texto}
           image={this.state.footer.image}
