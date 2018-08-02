@@ -1,8 +1,10 @@
-import React from 'react';
-import Form from './Form';
+import React from "react";
+import Form from "./Form";
+import Visor from "./Visor";
+
 class Main extends React.Component {
-  render(){
-     return (
+  render() {
+    return (
       <div className="container__main">
         <main className="page__main">
           <section className="visor">
@@ -59,8 +61,8 @@ class Main extends React.Component {
               </div>
             </div>
           </section>
-          <Form title={this.props.titulo} skills={this.props.skills}/>
-              </main>
+          <Form title={this.props.titulo} skills={this.props.skills} />
+        </main>
       </div>
     );
   }
