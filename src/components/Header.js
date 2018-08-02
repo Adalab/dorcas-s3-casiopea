@@ -1,12 +1,14 @@
-import React from 'react';
-import image from "../images/awesomecards.svg";
-
+import React from "react";
 class Header extends React.Component {
-  render(){
-     return (
+  render() {
+    return (
       <div className="container__header">
         <header className="header">
-          <img src={image} alt="Logo de Awesome Cards" className="header__logo" />
+          <img
+            src={this.props.img}
+            alt="Logo de Awesome Cards"
+            className="header__logo"
+          />
         </header>
       </div>
     );

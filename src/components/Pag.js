@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import "../styles/main.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
 
 class Pag extends React.Component {
-  render(){
+  render() {
     return (
       <div className="container__all">
-        <Header />
+        <Header img={this.props.logoAwe} />
         <Main />
         <Footer />
       </div>
