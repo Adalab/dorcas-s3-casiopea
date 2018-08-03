@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Pag from "./components/Pag";
 import logoAda from "./images/logo-adalab-80px.png";
+import logoAwesome from "./images/awesomecards.svg";
 
 class App extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class App extends Component {
           href={this.state.footer.href}
           titulos={this.state.form.titulos}
           seleccion={this.state.skills}
-          logoAwe={this.logoAwesome}
+          logoAwe={logoAwesome}
         />
       </div>
     );
