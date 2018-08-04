@@ -28,7 +28,15 @@ class CompComparte extends React.Component {
                 </span>
               </button>
             </div>
+            <div class="fieldset__share--created">
+              <p>La tarjeta ha sido creada:</p>
+              <p class="fieldset__share--link"></p>
+              <button type="button" name="button" class="fieldset__share--button-twitter">
+                <i class="fab fa-twitter"></i> Compartir en Twitter
+              </button>
+            </div>
           </div>
+          
         </fieldset>
     );
   }
