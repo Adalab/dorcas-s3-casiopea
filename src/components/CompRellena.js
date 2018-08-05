@@ -72,6 +72,7 @@ class CompRellena extends React.Component {
                 name="email"
                 placeholder="Ej: sally-hill@gmail.com"
                 autoComplete="email"
+                onChange={this.props.handlerMail}
               />
             </div>
             <div className="">
@@ -84,6 +85,7 @@ class CompRellena extends React.Component {
                 name="telefono"
                 placeholder="Ej: +34 555-55-55-55"
                 autoComplete="tel-national"
+                onChange={this.props.handlerPhone}
               />
             </div>
             <div className="">
@@ -95,6 +97,7 @@ class CompRellena extends React.Component {
                 type="text"
                 name="linkedin"
                 placeholder="Ej: linkedin.com/in/Sally.hill"
+                onChange={this.props.handlerLinkedin}
               />
             </div>
             <div className="">
@@ -106,6 +109,7 @@ class CompRellena extends React.Component {
                 type="text"
                 name="github"
                 placeholder="Ej: sally-hill"
+                onChange={this.props.handlerGithub}
               />
             </div>
           </div>

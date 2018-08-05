@@ -697,14 +697,10 @@ input:-moz-placeholder {
   margin: 15px 30px;
   font-size: 28px; }
 
-.mobile {
-  display: none; }
+.mobile {}
 
-.email {
-  display: none; }
+.email {}
 
-.linkedin {
-  display: none; }
+.linkedin {}
 
-.github {
-  display: none; }
+.github {}
