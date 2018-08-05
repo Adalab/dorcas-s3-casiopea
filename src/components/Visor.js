@@ -17,11 +17,11 @@ class Visor extends React.Component {
                 <div className="card__head--container">
                   <div className="card__name">
                     <p className="card__name--name" id="element-name">
-                      Nombre Apellido
+                      {this.props.name}
                     </p>
                     <div className="card__job">
                       <p className="card__job--job" id="element-role">
-                        Descripción
+                      {this.props.job}
                       </p>
                     </div>
                   </div>

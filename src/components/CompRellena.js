@@ -27,6 +27,7 @@ class CompRellena extends React.Component {
               id="editor-name"
               placeholder="Ej: Sally Jill"
               data-donde="element-name"
+              onChange={this.props.handlerName}
             />
           </div>
           <div className="">
@@ -40,6 +41,7 @@ class CompRellena extends React.Component {
               id="editor-role"
               placeholder="Ej: Front-end unicorn"
               data-donde="element-role"
+              onChange={this.props.handlerJob}
             />
           </div>
           <div className="">
