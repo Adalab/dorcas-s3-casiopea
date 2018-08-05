@@ -9,7 +9,7 @@ class CompRellena extends React.Component {
         <div className="fieldset__container--title">
           <span className="fieldset__rellena--keyboard">
             <i className="far fa-keyboard" />
-            <h2 className="fieldset__title">Rellena</h2>
+            <h2 className="fieldset__title">{this.props.tituloRellena}</h2>
           </span>
           <span className="fieldset__rellena--arrow collapsible__label">
             <i className="fas fa-angle-up rotate" />
@@ -17,7 +17,7 @@ class CompRellena extends React.Component {
         </div>
         <div className=" div__editor--inner">{/* collapsible__content */}
           <div className="formulario">
-            <label className="fieldset__rellena--label" for="editor-name">
+            <label className="fieldset__rellena--label" htmlFor="editor-name">
               Nombre completo
             </label>
             <input
@@ -30,7 +30,7 @@ class CompRellena extends React.Component {
             />
           </div>
           <div className="">
-            <label className="fieldset__rellena--label" for="editor-role">
+            <label className="fieldset__rellena--label" htmlFor="editor-role">
               Puesto
             </label>
             <input
@@ -43,7 +43,7 @@ class CompRellena extends React.Component {
             />
           </div>
           <div className="">
-            <label className="fieldset__rellena--label" for="imagen">
+            <label className="fieldset__rellena--label" htmlFor="imagen">
               Imagen de perfil
             </label>
             <div className="div__imagen">
@@ -61,7 +61,7 @@ class CompRellena extends React.Component {
           </div>
           <div className="contact">
             <div className="">
-              <label className="fieldset__rellena--label" for="email">
+              <label className="fieldset__rellena--label" htmlFor="email">
                 Email
               </label>
               <input
@@ -73,7 +73,7 @@ class CompRellena extends React.Component {
               />
             </div>
             <div className="">
-              <label className="fieldset__rellena--label" for="telefono">
+              <label className="fieldset__rellena--label" htmlFor="telefono">
                 Teléfono
               </label>
               <input
@@ -85,7 +85,7 @@ class CompRellena extends React.Component {
               />
             </div>
             <div className="">
-              <label className="fieldset__rellena--label" for="linkedin">
+              <label className="fieldset__rellena--label" htmlFor="linkedin">
                 Linkedin
               </label>
               <input
@@ -96,7 +96,7 @@ class CompRellena extends React.Component {
               />
             </div>
             <div className="">
-              <label className="fieldset__rellena--label" for="github">
+              <label className="fieldset__rellena--label" htmlFor="github">
                 Github
               </label>
               <input
@@ -110,7 +110,7 @@ class CompRellena extends React.Component {
           <div className="">
             <label
               className="fieldset__rellena--label label__habilidades"
-              for="habilidades"
+              htmlFor="habilidades"
               >
                 Habilidades (máximo 3)
               </label>
