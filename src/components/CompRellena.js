@@ -69,7 +69,7 @@ class CompRellena extends React.Component {
                 type="email"
                 name="email"
                 placeholder="Ej: sally-hill@gmail.com"
-                autocomplete="email"
+                autoComplete="email"
               />
             </div>
             <div className="">
@@ -81,7 +81,7 @@ class CompRellena extends React.Component {
                 type="phone"
                 name="telefono"
                 placeholder="Ej: +34 555-55-55-55"
-                autocomplete="tel-national"
+                autoComplete="tel-national"
               />
             </div>
             <div className="">
