@@ -25,7 +25,7 @@ class CompRellena extends React.Component {
         <div className="fieldset__container--title">
           <span className="fieldset__rellena--keyboard">
             <i className="far fa-keyboard" />
-            <h2 className="fieldset__title">Rellena</h2>
+            <h2 className="fieldset__title">{this.props.tituloRellena}</h2>
           </span>
           <span className="fieldset__rellena--arrow collapsible__label">
             <i className="fas fa-angle-up rotate" />
@@ -33,7 +33,7 @@ class CompRellena extends React.Component {
         </div>
         <div className=" div__editor--inner">{/* collapsible__content */}
           <div className="formulario">
-            <label className="fieldset__rellena--label" for="editor-name">
+            <label className="fieldset__rellena--label" htmlFor="editor-name">
               Nombre completo
             </label>
             <input
@@ -43,10 +43,11 @@ class CompRellena extends React.Component {
               id="editor-name"
               placeholder="Ej: Sally Jill"
               data-donde="element-name"
+              onChange={this.props.handlerName}
             />
           </div>
           <div className="">
-            <label className="fieldset__rellena--label" for="editor-role">
+            <label className="fieldset__rellena--label" htmlFor="editor-role">
               Puesto
             </label>
             <input
@@ -56,10 +57,11 @@ class CompRellena extends React.Component {
               id="editor-role"
               placeholder="Ej: Front-end unicorn"
               data-donde="element-role"
+              onChange={this.props.handlerJob}
             />
           </div>
           <div className="">
-            <label className="fieldset__rellena--label" for="imagen">
+            <label className="fieldset__rellena--label" htmlFor="imagen">
               Imagen de perfil
             </label>
             <div className="div__imagen">
@@ -81,7 +83,7 @@ class CompRellena extends React.Component {
           </div>
           <div className="contact">
             <div className="">
-              <label className="fieldset__rellena--label" for="email">
+              <label className="fieldset__rellena--label" htmlFor="email">
                 Email
               </label>
               <input
@@ -89,11 +91,12 @@ class CompRellena extends React.Component {
                 type="email"
                 name="email"
                 placeholder="Ej: sally-hill@gmail.com"
-                autocomplete="email"
+                autoComplete="email"
+                onChange={this.props.handlerMail}
               />
             </div>
             <div className="">
-              <label className="fieldset__rellena--label" for="telefono">
+              <label className="fieldset__rellena--label" htmlFor="telefono">
                 Teléfono
               </label>
               <input
@@ -101,11 +104,12 @@ class CompRellena extends React.Component {
                 type="phone"
                 name="telefono"
                 placeholder="Ej: +34 555-55-55-55"
-                autocomplete="tel-national"
+                autoComplete="tel-national"
+                onChange={this.props.handlerPhone}
               />
             </div>
             <div className="">
-              <label className="fieldset__rellena--label" for="linkedin">
+              <label className="fieldset__rellena--label" htmlFor="linkedin">
                 Linkedin
               </label>
               <input
@@ -113,10 +117,11 @@ class CompRellena extends React.Component {
                 type="text"
                 name="linkedin"
                 placeholder="Ej: linkedin.com/in/Sally.hill"
+                onChange={this.props.handlerLinkedin}
               />
             </div>
             <div className="">
-              <label className="fieldset__rellena--label" for="github">
+              <label className="fieldset__rellena--label" htmlFor="github">
                 Github
               </label>
               <input
@@ -124,13 +129,14 @@ class CompRellena extends React.Component {
                 type="text"
                 name="github"
                 placeholder="Ej: sally-hill"
+                onChange={this.props.handlerGithub}
               />
             </div>
           </div>
           <div className="">
             <label
               className="fieldset__rellena--label label__habilidades"
-              for="habilidades"
+              htmlFor="habilidades"
               >
                 Habilidades (máximo 3)
               </label>
