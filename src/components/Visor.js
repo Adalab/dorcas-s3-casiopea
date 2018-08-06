@@ -72,7 +72,7 @@ class Visor extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="card__pic" style={{backgroundImage:'url(' + {this.props.foto} + ')'}} >
+            <div className="card__pic" style={{backgroundImage:'url(' + this.props.foto + ')'}} >
 
             {/* <img className="card__pic" src={this.props.foto} alt="foto perfil" /> */}
             </div>
