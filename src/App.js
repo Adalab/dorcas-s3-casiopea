@@ -3,6 +3,7 @@ import Pag from "./components/Pag";
 import logoAda from "./images/logo-adalab-80px.png";
 import logoAwesome from "./images/awesomecards.svg";
 import { Link, Switch, Route} from 'react-router-dom';
+import PagInicio from "./components/PagInicio";
 
 class App extends Component {
   constructor(props) {
@@ -56,15 +57,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Pag
-          visor={this.state.json}
-          copyright={this.state.footer.texto}
-          image={this.state.footer.image}
-          href={this.state.footer.href}
-          titulos={this.state.form.titulos}
-          seleccion={this.state.skills}
-          logoAwe={logoAwesome}
-        />
+        <Switch>
+          <Route exact path='/' component = { PagInicio} />
+          <Route path ='/Pag' render = {() =>
+            <Pag
+                    visor={this.state.json}
+                    copyright={this.state.footer.texto}
+                    image={this.state.footer.image}
+                    href={this.state.footer.href}
+                    titulos={this.state.form.titulos}
+                    seleccion={this.state.skills}
+                    logoAwe={logoAwesome}
+                  />}
+                />
+        </Switch>
       </div>
     );
   }

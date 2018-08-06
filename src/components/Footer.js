@@ -10,7 +10,7 @@ class Footer extends React.Component {
           <a href={this.props.href} target="_Blank">
             <img
               className="footer__logo--adalab"
-              src={this.props.img}
+              src={logoAda}
               alt="Logotipo de Adalab"
             />
           </a>
