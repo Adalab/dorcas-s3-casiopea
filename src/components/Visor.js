@@ -72,7 +72,9 @@ class Visor extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="card__pic" />
+            <div className="card__pic" >
+              <img src={this.props.foto} alt="foto perfil" />
+            </div>
 
             <div className="card__foot">
               <div className="card__foot--social">
