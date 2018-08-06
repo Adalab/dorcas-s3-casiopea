@@ -702,10 +702,14 @@ input:-moz-placeholder {
   margin: 15px 30px;
   font-size: 28px; }
 
-.mobile {}
+.mobile {
+  display: none; }
 
-.email {}
+.email {
+  display: none; }
 
-.linkedin {}
+.linkedin {
+  display: none; }
 
-.github {}
+.github {
+  display: none; }
