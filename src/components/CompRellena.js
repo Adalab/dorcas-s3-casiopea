@@ -82,8 +82,8 @@ class CompRellena extends React.Component {
               <input onClick={this.clickSimulado} type="button" value="Enviar" className="añadir__upload-btn" />
 
             </div>
-            
-            <img className="mini" alt="foto perfil de tamaño mini" src={this.props.foto} />
+            <div className="mini" style={{backgroundImage:'url(' + this.props.foto + ')'}}></div>
+
 
           </div>
         </div>
