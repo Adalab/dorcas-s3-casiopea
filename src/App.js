@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Pag from "./components/Pag";
 import logoAda from "./images/logo-adalab-80px.png";
 import logoAwesome from "./images/awesomecards.svg";
+import { Link, Switch, Route} from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
