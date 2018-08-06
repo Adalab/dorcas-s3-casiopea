@@ -13,7 +13,7 @@ class App extends Component {
         "name" : "Nombre Apellido",
         "job": "Descripción",
         "phone": "",
-        "email": "",
+        "mail": "",
         "linkedin": "",
         "github": "",
         "photo": "",
