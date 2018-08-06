@@ -144,7 +144,11 @@ table {
 
 .card__pic {
   width: 240px;
-  height: 200px; }
+  height: 200px;
+  background-image: url("../images/pollito.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .card__foot--social {
   display: flex;
