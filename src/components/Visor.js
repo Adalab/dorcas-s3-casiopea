@@ -1,6 +1,50 @@
 import React from "react";
 
 class Visor extends React.Component {
+  renderMail(mail) {
+    if (mail!=='') {
+    return (
+        <div className="card__foot--icon email">
+          <a href="" className="emailLink">
+            <i className="iconsocial far fa-envelope" />
+          </a>
+        </div>
+    );
+    }
+  }
+  renderPhone(phone){
+    if(phone!==''){
+      return(
+        <div className="card__foot--icon mobile">
+          <a href="" className="mobileLink">
+            <i className="iconsocial fas fa-mobile-alt" />
+          </a>
+        </div>
+      );
+    }
+  }
+  renderLinkedin(linkedin){
+    if(linkedin!==''){
+      return(
+        <div className="card__foot--icon linkedin">
+          <a href="" className="linkedinLink">
+            <i className="iconsocial fab fa-linkedin-in" />
+          </a>
+        </div>
+      );
+    }
+  }
+  renderGithub(github){
+    if(github!==''){
+      return(
+        <div className="card__foot--icon github">
+          <a href="" className="githubLink">
+            <i className="iconsocial fab fa-github-alt" />
+          </a>
+        </div>
+      )
+    }
+  }
   render() {
     return (
       <div className="container__visor">
@@ -17,11 +61,11 @@ class Visor extends React.Component {
                 <div className="card__head--container">
                   <div className="card__name">
                     <p className="card__name--name" id="element-name">
-                      Nombre Apellido
+                      {this.props.name}
                     </p>
                     <div className="card__job">
                       <p className="card__job--job" id="element-role">
-                        Descripción
+                      {this.props.job}
                       </p>
                     </div>
                   </div>
@@ -32,26 +76,10 @@ class Visor extends React.Component {
 
             <div className="card__foot">
               <div className="card__foot--social">
-                <div className="card__foot--icon mobile">
-                  <a href="" className="mobileLink">
-                    <i className="iconsocial fas fa-mobile-alt" />
-                  </a>
-                </div>
-                <div className="card__foot--icon email">
-                  <a href="" className="emailLink">
-                    <i className="iconsocial far fa-envelope" />
-                  </a>
-                </div>
-                <div className="card__foot--icon linkedin">
-                  <a href="" className="linkedinLink">
-                    <i className="iconsocial fab fa-linkedin-in" />
-                  </a>
-                </div>
-                <div className="card__foot--icon github">
-                  <a href="" className="githubLink">
-                    <i className="iconsocial fab fa-github-alt" />
-                  </a>
-                </div>
+                  {this.renderPhone(this.props.phone)}
+                  {this.renderMail(this.props.mail)}
+                  {this.renderLinkedin(this.props.linkedin)}
+                  {this.renderGithub(this.props.github)}
               </div>
               <div className="card__foot--skills" />
             </div>
