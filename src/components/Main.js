@@ -32,7 +32,13 @@ class Main extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="card__pic" />
+
+              {/* foto de perfil */}
+
+              <div className="card__pic" >
+              <img alt="foto perfil" src={this.props.foto} />
+            </div>
+
 
               <div className="card__foot">
                 <div className="card__foot--social">
@@ -61,7 +67,7 @@ class Main extends React.Component {
               </div>
             </div>
           </section>
-          <Form title={this.props.titulo} skills={this.props.skills} />
+          <Form funcionfoto={this.props.funcionfoto} foto={this.props.foto} title={this.props.titulo} skills={this.props.skills} />
         </main>
       </div>
     );

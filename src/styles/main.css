@@ -144,11 +144,7 @@ table {
 
 .card__pic {
   width: 240px;
-  height: 200px;
-  background-image: url("../images/pollito.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  height: 200px; }
 
 .card__foot--social {
   display: flex;
@@ -550,11 +546,7 @@ input:-moz-placeholder {
   height: 30px;
   border: solid 1px black;
   box-sizing: border-box;
-  margin-left: 20px;
-  background-image: url("../images/pollito.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  margin-left: 20px; }
 
 .añadir__upload-btn {
   width: 140px;

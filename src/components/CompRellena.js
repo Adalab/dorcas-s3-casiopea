@@ -1,8 +1,24 @@
 import React from 'react';
-
-
-
+const fr= new FileReader();
 class CompRellena extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.clickCargarFoto=this.clickCargarFoto.bind(this);
+    //this.cambiarsrc=this.cambiarsrc.bind(this);
+    this.fileInput = React.createRef();
+  }
+  clickCargarFoto(event){
+    event.preventDefault();
+    fr.addEventListener('load',this.cambiarsrc);
+    fr.readAsDataURL(this.fileInput.current.files[0])
+    //this.props.funcionfoto(fr.result);
+  }
+
+  cambiarsrc(){
+    const url=fr.result
+    console.log(url);
+  }
   render(){
     return (
       <fieldset className="fieldset__rellena div__rellena collapsible fieldset--invisible">
@@ -48,15 +64,19 @@ class CompRellena extends React.Component {
             </label>
             <div className="div__imagen">
               <div className="añadir">
-                <button className="añadir__upload-btn">Añadir imagen</button>
                 <input
+                  ref={this.fileInput}
                   type="file"
                   name=""
                   id="img-selector"
                   className="añadir__hiddenField"
                 />
+                <input onClick={this.clickCargarFoto} type="submit"  className="añadir__upload-btn" />
+
               </div>
-              <div className="mini" />
+
+                <img className="mini" alt="foto perfil de tamaño mini" src={this.props.foto} />
+
             </div>
           </div>
           <div className="contact">
