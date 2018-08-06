@@ -3,21 +3,26 @@ const fr= new FileReader();
 class CompRellena extends React.Component {
   constructor(props){
     super(props);
-
+this.clickSimulado=this.clickSimulado.bind(this);
     this.clickCargarFoto=this.clickCargarFoto.bind(this);
-    //this.cambiarsrc=this.cambiarsrc.bind(this);
+    this.cambiarsrc2=this.cambiarsrc2.bind(this);
     this.fileInput = React.createRef();
   }
-  clickCargarFoto(event){
-    event.preventDefault();
-    fr.addEventListener('load',this.cambiarsrc);
+  clickSimulado(){
+    document.querySelector('#img-selector').click();
+
+  }
+  clickCargarFoto(){
+
+
+    fr.addEventListener('load',this.cambiarsrc2);
     fr.readAsDataURL(this.fileInput.current.files[0])
     //this.props.funcionfoto(fr.result);
   }
 
-  cambiarsrc(){
-    const url=fr.result
-    console.log(url);
+  cambiarsrc2(){
+    const url=fr.result;
+    this.props.funcionfoto(url);
   }
   render(){
     return (
@@ -72,8 +77,9 @@ class CompRellena extends React.Component {
                   name=""
                   id="img-selector"
                   className="añadir__hiddenField"
+                  onChange={this.clickCargarFoto}
                 />
-                <input onClick={this.clickCargarFoto} type="submit"  className="añadir__upload-btn" />
+                <input onClick={this.clickSimulado} type="button"  className="añadir__upload-btn" />
 
               </div>
 

@@ -42,16 +42,16 @@ class App extends Component {
     this.callApi();
   }
 
-  cambiarsrc(fr){
+  cambiarsrc(rutafoto){
     this.setState ((prevState) => {
       const j = {
-        ...this.prevState.json,
-        photo: fr.result
+        ...this.state.json,
+        photo: rutafoto
       }
     return (
       {json: j}
     )
-  })
+  });
   }
 
   callApi() {
