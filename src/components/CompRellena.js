@@ -151,7 +151,7 @@ class CompRellena extends React.Component {
                 <select className="select__habilidades select__habilidades1">
                   {this.props.sect.map(function(item){
                     return (
-                      <option value={item}>{item}</option>
+                      <option key={item}>{item}</option>
                     )
                   })}
                 </select>
