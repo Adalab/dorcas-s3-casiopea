@@ -703,10 +703,13 @@ input:-moz-placeholder {
   font-size: 28px; }
 
 .mobile {
-   }
+  display: none; }
 
-.email { }
-.linkedin {}
+.email {
+  display: none; }
+
+.linkedin {
+  display: none; }
 
 .github {
-  }
+  display: none; }
