@@ -265,6 +265,11 @@ table {
 body {
   margin: 0; }
 
+.container__all {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh; }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -697,9 +702,11 @@ input:-moz-placeholder {
   margin: 15px 30px;
   font-size: 28px; }
 
-.mobile {}
+.mobile {
+   }
 
 .email { }
 .linkedin {}
 
-.github {}
+.github {
+  }

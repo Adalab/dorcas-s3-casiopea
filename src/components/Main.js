@@ -55,9 +55,9 @@ class Main extends React.Component {
       <div className="container__main">
         <main className="page__main">
           <section className="visor">
-            <Visor name={this.state.name} job={this.state.job} mail={this.state.mail} phone={this.state.phone} linkedin={this.state.linkedin} github={this.state.github} />
+            <Visor funcionfoto={this.props.funcionfoto} foto={this.props.foto} name={this.state.name} job={this.state.job} mail={this.state.mail} phone={this.state.phone} linkedin={this.state.linkedin} github={this.state.github} />
           </section>
-          <Form handlerGithub={this.actualizarGithub} handlerLinkedin={this.actualizarLinkedin} handlerPhone={this.actualizarPhone} handlerMail={this.actualizarMail} handlerName={this.actualizarName} handlerJob={this.actualizarJob} title={this.props.titulo} skills={this.props.skills} />
+          <Form funcionfoto={this.props.funcionfoto} foto={this.props.foto} handlerGithub={this.actualizarGithub} handlerLinkedin={this.actualizarLinkedin} handlerPhone={this.actualizarPhone} handlerMail={this.actualizarMail} handlerName={this.actualizarName} handlerJob={this.actualizarJob} title={this.props.titulo} skills={this.props.skills} />
         </main>
       </div>
     );

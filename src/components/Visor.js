@@ -3,13 +3,13 @@ import React from "react";
 class Visor extends React.Component {
   renderMail(mail) {
     if (mail!=='') {
-    return (
+      return (
         <div className="card__foot--icon email">
           <a href="" className="emailLink">
             <i className="iconsocial far fa-envelope" />
           </a>
         </div>
-    );
+      );
     }
   }
   renderPhone(phone){
@@ -65,21 +65,22 @@ class Visor extends React.Component {
                     </p>
                     <div className="card__job">
                       <p className="card__job--job" id="element-role">
-                      {this.props.job}
+                        {this.props.job}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="card__pic" />
+            <div className="card__pic" style={{backgroundImage:'url(' + this.props.foto + ')'}} >
+            </div>
 
             <div className="card__foot">
               <div className="card__foot--social">
-                  {this.renderPhone(this.props.phone)}
-                  {this.renderMail(this.props.mail)}
-                  {this.renderLinkedin(this.props.linkedin)}
-                  {this.renderGithub(this.props.github)}
+                {this.renderPhone(this.props.phone)}
+                {this.renderMail(this.props.mail)}
+                {this.renderLinkedin(this.props.linkedin)}
+                {this.renderGithub(this.props.github)}
               </div>
               <div className="card__foot--skills" />
             </div>

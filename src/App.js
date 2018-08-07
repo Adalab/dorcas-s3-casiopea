@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Pag from "./components/Pag";
 import logoAda from "./images/logo-adalab-80px.png";
 import logoAwesome from "./images/awesomecards.svg";
+import fotomini from './images/pollito.png';
+import foto from './images/pollito.png';
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +18,7 @@ class App extends Component {
         "mail": "",
         "linkedin": "",
         "github": "",
-        "photo": "",
+        "photo": foto,
         "skills": []
       },
       footer: {
@@ -33,8 +35,23 @@ class App extends Component {
       },
       skills: []
     };
+
     this.callApi = this.callApi.bind(this);
+
+    this.cambiarsrc=this.cambiarsrc.bind(this);
     this.callApi();
+  }
+
+  cambiarsrc(rutafoto){
+    this.setState ((prevState) => {
+      const j = {
+        ...this.state.json,
+        photo: rutafoto
+      }
+    return (
+      {json: j}
+    )
+  });
   }
 
   callApi() {
@@ -56,6 +73,8 @@ class App extends Component {
     return (
       <div className="App">
         <Pag
+          funcionfoto={this.cambiarsrc}
+          foto={this.state.json.photo}
           visor={this.state.json}
           copyright={this.state.footer.texto}
           image={this.state.footer.image}
