@@ -4,6 +4,8 @@ import logoAda from "./images/logo-adalab-80px.png";
 import logoAwesome from "./images/awesomecards.svg";
 import { Link, Switch, Route} from 'react-router-dom';
 import PagInicio from "./components/PagInicio";
+import fotomini from './images/pollito.png';
+import foto from './images/pollito.png';
 
 class App extends Component {
   constructor(props) {
@@ -15,10 +17,10 @@ class App extends Component {
         "name" : "Nombre Apellido",
         "job": "Descripción",
         "phone": "",
-        "email": "",
+        "mail": "",
         "linkedin": "",
         "github": "",
-        "photo": "",
+        "photo": foto,
         "skills": []
       },
       footer: {
@@ -35,8 +37,23 @@ class App extends Component {
       },
       skills: []
     };
+
     this.callApi = this.callApi.bind(this);
+
+    this.cambiarsrc=this.cambiarsrc.bind(this);
     this.callApi();
+  }
+
+  cambiarsrc(rutafoto){
+    this.setState ((prevState) => {
+      const j = {
+        ...this.state.json,
+        photo: rutafoto
+      }
+    return (
+      {json: j}
+    )
+  });
   }
 
   callApi() {
