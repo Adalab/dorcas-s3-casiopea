@@ -4,7 +4,6 @@ import logoAda from "./images/logo-adalab-80px.png";
 import logoAwesome from "./images/awesomecards.svg";
 import { Link, Switch, Route} from 'react-router-dom';
 import PagInicio from "./components/PagInicio";
-import fotomini from './images/pollito.png';
 import foto from './images/pollito.png';
 
 class App extends Component {
@@ -45,11 +44,13 @@ class App extends Component {
   }
 
   cambiarsrc(rutafoto){
+
     this.setState ((prevState) => {
       const j = {
         ...this.state.json,
         photo: rutafoto
       }
+
     return (
       {json: j}
     )
@@ -78,6 +79,8 @@ class App extends Component {
           <Route exact path='/' component = { PagInicio} />
           <Route path ='/Pag' render = {() =>
             <Pag
+                    funcionfoto={this.cambiarsrc}
+                    foto={this.state.json.photo}
                     visor={this.state.json}
                     copyright={this.state.footer.texto}
                     image={this.state.footer.image}
