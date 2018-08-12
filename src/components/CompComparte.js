@@ -45,12 +45,25 @@ class CompComparte extends React.Component {
                 </span>
               </button>
             </div>
-            <div class="fieldset__share--created">
+
+
+{/* // {this.props.finalCardToShare.cardURL !== undefined && (
+//   <section className="shares collapsible__content">
+//     <p className="shares__text">La tarjeta ha sido creada:</p>
+
+//     <a href={this.props.finalCardToShare.cardURL}>
+//       <iframe className="result__iframe" src={this.props.finalCardToShare.cardURL}></iframe>
+//     </a> */}
+
+
+
+
+            <div className="fieldset__share--created">
               <p>La tarjeta ha sido creada:</p>
-              <p class="fieldset__share--link"></p>
-              <button type="button" name="button" class="fieldset__share--button-twitter"
+              <p className="fieldset__share--link"></p>
+              <button type="button" name="button" className="fieldset__share--button-twitter"
               onClick={this.handleShareButton} >
-                <i class="fab fa-twitter"></i> Compartir en Twitter
+                <i className="fab fa-twitter"></i> Compartir en Twitter
               </button>
             </div>
           </div>
