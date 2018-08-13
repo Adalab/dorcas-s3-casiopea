@@ -2,11 +2,17 @@ import React from "react";
 import "../styles/main.css";
 
 class Visor extends React.Component {
+  constructor(props) {
+   super(props);
+
+   this.paletteVisor=this.paletteVisor.bind(this);
+ }
+
   renderMail(mail) {
     if(mail !== ''){
       const hrefMail = "mailto:" + mail;
     return (
-        <div className="card__foot--icon email">
+        <div className={`card__foot--icon email ${this.paletteVisor()}`}>
           <a href={hrefMail} className="emailLink">
             <i className="iconsocial far fa-envelope" />
           </a>
@@ -18,7 +24,7 @@ class Visor extends React.Component {
     if(phone!==""){
       const hrefTel = "mailto:" + phone;
       return(
-        <div className="card__foot--icon mobile">
+        <div className={`card__foot--icon mobile ${this.paletteVisor()}`}>
           <a href={hrefTel} className="mobileLink">
             <i className="iconsocial fas fa-mobile-alt" />
           </a>
@@ -30,7 +36,7 @@ class Visor extends React.Component {
     if(linkedin!==""){
       const hrefLinkedin = "https://linkedin.com/in/" + linkedin;
       return(
-        <div className="card__foot--icon linkedin">
+        <div className={`card__foot--icon linkedin ${this.paletteVisor()}`}>
           <a href={hrefLinkedin} className="linkedinLink">
             <i className="iconsocial fab fa-linkedin-in" />
           </a>
@@ -42,7 +48,7 @@ class Visor extends React.Component {
     if(github!==""){
       const hrefGithub = "https://github.com/" + github;
       return(
-        <div className="card__foot--icon github">
+        <div className={`card__foot--icon github ${this.paletteVisor()}`}>
           <a href={hrefGithub} className="githubLink">
             <i className="iconsocial fab fa-github-alt" />
           </a>
@@ -50,6 +56,17 @@ class Visor extends React.Component {
       )
     }
   }
+
+  paletteVisor () {
+   let color = "gris";
+   if (this.props.visor.palette == 1) {
+     color = "azul";
+   } else if (this.props.visor.palette == 2) {
+     color = "rojo";
+   }
+   return color;
+ }
+
   render() {
     return (
       <div className="container__visor">
@@ -62,10 +79,10 @@ class Visor extends React.Component {
           </button>
           <div className="card">
             <div className="card__head">
-              <div className="card__head--border">
+              <div className={`card__head--border ${this.paletteVisor()}`}>
                 <div className="card__head--container">
                   <div className="card__name">
-                    <p className="card__name--name" id="element-name">
+                    <p className={`card__name--name ${this.paletteVisor()}`} id="element-name">
                       {this.props.visor.name}
                     </p>
                     <div className="card__job">

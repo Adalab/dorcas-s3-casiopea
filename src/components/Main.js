@@ -22,7 +22,9 @@ class Main extends React.Component {
             handlerName={this.props.handlerName}
             handlerJob={this.props.handlerJob}
             title={this.props.titulo}
-            skills={this.props.skills} />
+            skills={this.props.skills}
+            changePalette={this.props.changePalette}
+            visor={this.props.visor} />
         </main>
       </div>
     );

@@ -18,10 +18,10 @@ class CompDisena extends React.Component {
           <ul className="listadiseño">
             <li className="diseña__colores--option">
               <input
-                id="azul"
+                value="1" id="azul"
                 type="radio"
                 className="diseña__colores--paleta diseña--radio"
-                name="elección"
+                name="elección" onChange={this.props.changePalette} color={this.props.visor.palette == 1}
               />
               <div className="diseña__colores--colores1" />
               <div className="diseña__colores--colores2" />
@@ -29,10 +29,10 @@ class CompDisena extends React.Component {
             </li>
             <li className="diseña__colores--option">
               <input
-                id="rojo"
+                value="2" id="rojo"
                 type="radio"
                 className="diseña__colores--paleta diseña--radio"
-                name="elección"
+                name="elección" onChange={this.props.changePalette} color={this.props.visor.palette == 2}
               />
               <div className="diseña__colores--colores4" />
               <div className="diseña__colores--colores5" />
@@ -40,10 +40,10 @@ class CompDisena extends React.Component {
             </li>
             <li className="diseña__colores--option">
               <input
-                id="gris"
+                value="3" id="gris"
                 type="radio"
                 className="diseña__colores--paleta diseña--radio"
-                name="elección"
+                name="elección" onChange={this.props.changePalette} color={this.props.visor.palette == 3}
               />
               <div className="diseña__colores--colores7" />
               <div className="diseña__colores--colores8" />
