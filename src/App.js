@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Pag from "./components/Pag";
 import logoAda from "./images/logo-adalab-80px.png";
 import logoAwesome from "./images/awesomecards.svg";
-import fotomini from './images/pollito.png';
+import { Link, Switch, Route} from 'react-router-dom';
+import PagInicio from "./components/PagInicio";
 import foto from './images/pollito.png';
 
 class App extends Component {
@@ -43,17 +44,22 @@ class App extends Component {
     this.actualizarGithub=this.actualizarGithub.bind(this);
 
     this.callApi = this.callApi.bind(this);
-
     this.cambiarsrc=this.cambiarsrc.bind(this);
+    this.reset=this.reset.bind(this);
+  }
+
+  componentDidMount () {
     this.callApi();
   }
 
   cambiarsrc(rutafoto){
+
     this.setState ((prevState) => {
       const j = {
         ...this.state.json,
         photo: rutafoto
       }
+
     return (
       {json: j}
     )
@@ -128,26 +134,51 @@ class App extends Component {
     });
   }
 
+  reset (){
+    this.setState({
+      json:{
+        "palette": 1,
+        "typography": 2,
+        "name" : "Nombre Apellido",
+        "job": "Descripción",
+        "phone": "",
+        "mail": "",
+        "linkedin": "",
+        "github": "",
+        "photo": foto,
+        "skills": []
+      }
+    })
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <Pag
-          funcionfoto={this.cambiarsrc}
-          foto={this.state.json.photo}
-          visor={this.state.json}
-          copyright={this.state.footer.texto}
-          image={this.state.footer.image}
-          href={this.state.footer.href}
-          titulos={this.state.form.titulos}
-          seleccion={this.state.skills}
-          logoAwe={logoAwesome}
-          handlerGithub={this.actualizarGithub}
-          handlerLinkedin={this.actualizarLinkedin}
-          handlerPhone={this.actualizarPhone}
-          handlerMail={this.actualizarMail}
-          handlerName={this.actualizarName}
-          handlerJob={this.actualizarJob}
-        />
+        <Switch>
+          <Route exact path='/' component = { PagInicio} />
+          <Route path ='/Pag' render = {() =>
+            <Pag
+                    funcionfoto={this.cambiarsrc}
+                    foto={this.state.json.photo}
+                    visor={this.state.json}
+                    copyright={this.state.footer.texto}
+                    image={this.state.footer.image}
+                    href={this.state.footer.href}
+                    titulos={this.state.form.titulos}
+                    seleccion={this.state.skills}
+                    logoAwe={logoAwesome}
+                    reset={this.reset}
+                    handlerGithub={this.actualizarGithub}
+                    handlerLinkedin={this.actualizarLinkedin}
+                    handlerPhone={this.actualizarPhone}
+                    handlerMail={this.actualizarMail}
+                    handlerName={this.actualizarName}
+                    handlerJob={this.actualizarJob}
+                  />}
+                />
+        </Switch>
       </div>
     );
   }

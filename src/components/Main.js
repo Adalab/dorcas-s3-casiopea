@@ -8,10 +8,10 @@ class Main extends React.Component {
       <div className="container__main">
         <main className="page__main">
           <section className="visor">
-            <Visor funcionfoto={this.props.funcionfoto}
-              foto={this.props.foto}
-              visor={this.props.visor}
-              />
+            <Visor
+            funcionfoto={this.props.funcionfoto}
+            visor={this.props.visor}
+            reset={this.props.reset}/>
           </section>
           <Form funcionfoto={this.props.funcionfoto}
             foto={this.props.foto}

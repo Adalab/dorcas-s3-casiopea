@@ -23,6 +23,7 @@ class CompRellena extends React.Component {
   cambiarsrc2(){
     const url=fr.result;
     this.props.funcionfoto(url);
+  
   }
   render(){
     return (
