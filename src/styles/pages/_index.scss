@@ -2,6 +2,12 @@ body {
   margin: 0;
 }
 
+.container__all {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -9,8 +15,8 @@ body {
   align-items: center;
   padding: 0 28px;
 
-@media all and (min-width: 768px) {
-  padding: 0 174px;
+  @media all and (min-width: 768px) {
+    padding: 0 174px;
   }
 }
 
@@ -23,7 +29,6 @@ body {
     height: 107px;
     width: 419px;
     margin: 348px 0 31px 0;
-
   }
 }
 
@@ -50,7 +55,6 @@ body {
   @media all and (min-width: 768px) {
     font-size: $large;
     margin: 8px 44px 21px 44px;
-
   }
 }
 
@@ -67,12 +71,12 @@ body {
   padding: 15px 20px 10px 20px;
   box-sizing: border-box;
 
-    @media all and (min-width: 768px) {
-      height: 86px;
-      width: 325px;
-      margin: 0 90px;
-      border-radius: 5px;
-    }
+  @media all and (min-width: 768px) {
+    height: 86px;
+    width: 325px;
+    margin: 0 90px;
+    border-radius: 5px;
+  }
 }
 .main__list--box {
   height: 49px;
@@ -81,14 +85,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-&:first-child{
-  margin-left: -9px;
-
-}
+  &:first-child {
+    margin-left: -9px;
+  }
   @media all and (min-width: 768px) {
     height: 61px;
     width: 75px;
-}
+  }
 }
 
 /* SEGUIMOS A PARTIR DE AQUI */
@@ -106,7 +109,6 @@ body {
   text-align: center;
   color: $dull-orange;
   font-size: 28px;
-
 }
 
 .main__button {
