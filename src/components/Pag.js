@@ -22,6 +22,7 @@ class Pag extends React.Component {
           handlerMail={this.props.handlerMail}
           handlerName={this.props.handlerName}
           handlerJob={this.props.handlerJob}
+          changePalette={this.props.changePalette}
           />
         <Footer
           copy={this.props.copyright}

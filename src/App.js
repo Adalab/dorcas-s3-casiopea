@@ -42,8 +42,7 @@ class App extends Component {
     this.actualizarPhone=this.actualizarPhone.bind(this);
     this.actualizarLinkedin=this.actualizarLinkedin.bind(this);
     this.actualizarGithub=this.actualizarGithub.bind(this);
-
-    this.callApi = this.callApi.bind(this);
+    this.changePalette=this.changePalette.bind(this);
     this.cambiarsrc=this.cambiarsrc.bind(this);
     this.reset=this.reset.bind(this);
   }
@@ -134,6 +133,20 @@ class App extends Component {
     });
   }
 
+  changePalette (e) {
+   const target = e.target;
+   this.setState ((prevState) => {
+     const j = {
+       ...this.state.json,
+       palette: target.value
+     }
+
+   return (
+     {json: j}
+   )
+ });
+ }
+
   reset (){
     this.setState({
       json:{
@@ -176,6 +189,7 @@ class App extends Component {
                     handlerMail={this.actualizarMail}
                     handlerName={this.actualizarName}
                     handlerJob={this.actualizarJob}
+                    changePalette={this.changePalette}
                   />}
                 />
         </Switch>
