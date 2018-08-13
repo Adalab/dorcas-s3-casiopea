@@ -6,6 +6,8 @@ class Visor extends React.Component {
    super(props);
 
    this.paletteVisor=this.paletteVisor.bind(this);
+   this.typographyVisor=this.typographyVisor.bind(this);
+
  }
 
   renderMail(mail) {
@@ -67,6 +69,16 @@ class Visor extends React.Component {
    return color;
  }
 
+ typographyVisor () {
+   let typo = "montserrat";
+   if (this.props.visor.typography == 1) {
+     typo = "ubuntu";
+   } else if (this.props.visor.typography == 2) {
+     typo = "comicsans";
+   }
+   return typo;
+ }
+
   render() {
     return (
       <div className="container__visor">
@@ -79,14 +91,14 @@ class Visor extends React.Component {
           </button>
           <div className="card">
             <div className="card__head">
-              <div className={`card__head--border ${this.paletteVisor()}`}>
+              <div className={`card__head--border ${this.paletteVisor()} ${this.typographyVisor()}`}>
                 <div className="card__head--container">
                   <div className="card__name">
-                    <p className={`card__name--name ${this.paletteVisor()}`} id="element-name">
+                    <p className={`card__name--name ${this.paletteVisor()} ${this.typographyVisor()}`} id="element-name">
                       {this.props.visor.name}
                     </p>
                     <div className="card__job">
-                      <p className="card__job--job" id="element-role">
+                      <p className={`card__job--job ${this.typographyVisor()}`} id="element-role">
                       {this.props.visor.job}
                       </p>
                     </div>

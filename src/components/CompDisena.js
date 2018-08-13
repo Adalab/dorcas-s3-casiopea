@@ -56,26 +56,26 @@ class CompDisena extends React.Component {
           <ul className="listadiseño">
             <li className="diseña__colores--option-fuentes diseña--texto1">
               <input
-                id="ubuntu"
+                value="1" id="ubuntu"
                 type="radio"
                 className="diseña--radio diseña--fuentes"
-                name="elecciónText"
+                name="elecciónText" onChange={this.props.changeTypography} typo={this.props.visor.typography == 1}
               />Ubuntu
             </li>
             <li className="diseña__colores--option-fuentes diseña--texto2">
               <input
-                id="comicsans"
+                value="2" id="comicsans"
                 type="radio"
                 className="diseña--radio diseña--fuentes"
-                name="elecciónText"
+                name="elecciónText" onChange={this.props.changeTypography} typo={this.props.visor.typography == 2}
               />Comic Sans
             </li>
             <li className="diseña__colores--option-fuentes diseña--texto3">
               <input
-                id="montserrat"
+                value="3" id="montserrat"
                 type="radio"
                 className="diseña--radio diseña--fuentes"
-                name="elecciónText"
+                name="elecciónText" onChange={this.props.changeTypography} typo={this.props.visor.typography == 3}
               />Montserrat
             </li>
           </ul>

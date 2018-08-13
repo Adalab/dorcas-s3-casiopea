@@ -43,6 +43,7 @@ class App extends Component {
     this.actualizarLinkedin=this.actualizarLinkedin.bind(this);
     this.actualizarGithub=this.actualizarGithub.bind(this);
     this.changePalette=this.changePalette.bind(this);
+    this.changeTypography=this.changeTypography.bind(this);
     this.cambiarsrc=this.cambiarsrc.bind(this);
     this.reset=this.reset.bind(this);
   }
@@ -147,6 +148,20 @@ class App extends Component {
  });
  }
 
+ changeTypography (e) {
+  const target = e.target;
+  this.setState ((prevState) => {
+    const j = {
+      ...this.state.json,
+      typography: target.value
+    }
+
+  return (
+    {json: j}
+  )
+});
+}
+
   reset (){
     this.setState({
       json:{
@@ -190,6 +205,7 @@ class App extends Component {
                     handlerName={this.actualizarName}
                     handlerJob={this.actualizarJob}
                     changePalette={this.changePalette}
+                    changeTypography={this.changeTypography}
                   />}
                 />
         </Switch>
