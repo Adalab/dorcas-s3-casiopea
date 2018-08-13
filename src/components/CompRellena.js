@@ -49,8 +49,8 @@ class CompRellena extends React.Component {
             id="editor-name"
             placeholder={this.props.placeholders.nombre}
             data-donde="element-name"
-            onChange={this.props.handlerName}
-            value={this.props.visor.name}
+            onKeyUp={this.props.handlerName}
+            defaulvalue={this.props.visor.name}
           />
         </div>
         <div className="">
@@ -64,8 +64,8 @@ class CompRellena extends React.Component {
             id="editor-role"
             placeholder={this.props.placeholders.descripcion}
             data-donde="element-role"
-            onChange={this.props.handlerJob}
-            value={this.props.visor.job}
+            onKeyUp={this.props.handlerJob}
+            defaulvalue={this.props.visor.job}
           />
         </div>
         <div className="">
@@ -101,8 +101,8 @@ class CompRellena extends React.Component {
               name="email"
               placeholder={this.props.placeholders.email}
               autoComplete="email"
-              onChange={this.props.handlerMail}
-              value={this.props.visor.mail}
+              onKeyUp={this.props.handlerMail}
+              defaulvalue={this.props.visor.mail}
             />
           </div>
           <div className="">
@@ -115,8 +115,8 @@ class CompRellena extends React.Component {
               name="telefono"
               placeholder={this.props.placeholders.telefono}
               autoComplete="tel-national"
-              onChange={this.props.handlerPhone}
-              value={this.props.visor.phone}
+              onKeyUp={this.props.handlerPhone}
+              defaulvalue={this.props.visor.phone}
             />
           </div>
           <div className="">
@@ -128,8 +128,8 @@ class CompRellena extends React.Component {
               type="text"
               name="linkedin"
               placeholder={this.props.placeholders.linkedin}
-              onChange={this.props.handlerLinkedin}
-              value={this.props.visor.linkedin}
+              onKeyUp={this.props.handlerLinkedin}
+              defaulvalue={this.props.visor.linkedin}
             />
           </div>
           <div className="">
@@ -141,8 +141,8 @@ class CompRellena extends React.Component {
               type="text"
               name="github"
               placeholder={this.props.placeholders.github}
-              onChange={this.props.handlerGithub}
-              value={this.props.visor.github}
+              onKeyUp={this.props.handlerGithub}
+              defaulvalue={this.props.visor.github}
             />
           </div>
         </div>

@@ -64,14 +64,12 @@ class App extends Component {
     if (localStorage.getItem('localStorage')) {
       const stateStorage = JSON.parse(localStorage.getItem('localStorage'));
       const json = stateStorage;
-      alert('carga LS');
       this.setState({
         json: json
       })
     }
   }
   saveStorage(){
-    alert('guards LS');
     localStorage.setItem("localStorage", JSON.stringify(this.state.json));
   }
 
