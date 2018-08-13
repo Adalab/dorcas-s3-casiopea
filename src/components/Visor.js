@@ -1,8 +1,9 @@
 import React from "react";
+import "../styles/main.css";
 
 class Visor extends React.Component {
   renderMail(mail) {
-    if (mail!=='') {
+    if(mail !== ''){
     return (
         <div className="card__foot--icon email">
           <a href="" className="emailLink">
@@ -10,10 +11,10 @@ class Visor extends React.Component {
           </a>
         </div>
     );
-    }
+  }
   }
   renderPhone(phone){
-    if(phone!==''){
+    if(phone!==""){
       return(
         <div className="card__foot--icon mobile">
           <a href="" className="mobileLink">
@@ -24,7 +25,7 @@ class Visor extends React.Component {
     }
   }
   renderLinkedin(linkedin){
-    if(linkedin!==''){
+    if(linkedin!==""){
       return(
         <div className="card__foot--icon linkedin">
           <a href="" className="linkedinLink">
@@ -35,7 +36,7 @@ class Visor extends React.Component {
     }
   }
   renderGithub(github){
-    if(github!==''){
+    if(github!==""){
       return(
         <div className="card__foot--icon github">
           <a href="" className="githubLink">
@@ -61,11 +62,11 @@ class Visor extends React.Component {
                 <div className="card__head--container">
                   <div className="card__name">
                     <p className="card__name--name" id="element-name">
-                      {this.props.name}
+                      {this.props.visor.name}
                     </p>
                     <div className="card__job">
                       <p className="card__job--job" id="element-role">
-                      {this.props.job}
+                      {this.props.visor.job}
                       </p>
                     </div>
                   </div>
@@ -76,10 +77,10 @@ class Visor extends React.Component {
 
             <div className="card__foot">
               <div className="card__foot--social">
-                  {this.renderPhone(this.props.phone)}
-                  {this.renderMail(this.props.mail)}
-                  {this.renderLinkedin(this.props.linkedin)}
-                  {this.renderGithub(this.props.github)}
+                  {this.renderPhone(this.props.visor.phone)}
+                  {this.renderMail(this.props.visor.mail)}
+                  {this.renderLinkedin(this.props.visor.linkedin)}
+                  {this.renderGithub(this.props.visor.github)}
               </div>
               <div className="card__foot--skills" />
             </div>
