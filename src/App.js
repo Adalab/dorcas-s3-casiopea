@@ -16,7 +16,7 @@ class App extends Component {
         name: "Nombre Apellido",
         job: "Descripción",
         phone: "",
-        mail:"",
+        mail:"carlos@sidiostedalimones.com",
         linkedin: "",
         github: "",
         "photo": foto,
@@ -64,12 +64,14 @@ class App extends Component {
     if (localStorage.getItem('localStorage')) {
       const stateStorage = JSON.parse(localStorage.getItem('localStorage'));
       const json = stateStorage;
+      alert('carga LS');
       this.setState({
         json: json
       })
     }
   }
   saveStorage(){
+    alert('guards LS');
     localStorage.setItem("localStorage", JSON.stringify(this.state.json));
   }
 
@@ -160,7 +162,7 @@ class App extends Component {
         skills: habilidades
       });
     });
-    this.saveStorage();
+    //this.saveStorage();
   }
 
   changePalette (e) {
