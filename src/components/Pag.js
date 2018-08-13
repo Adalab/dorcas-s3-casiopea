@@ -9,13 +9,14 @@ class Pag extends React.Component {
     return (
       <div className="container__all">
         <Header img={this.props.logoAwe} />
-        <Main 
-          funcionfoto={this.props.funcionfoto} 
-          foto={this.props.foto} 
-          visor={this.props.visor} 
-          titulo={this.props.titulos} 
-          skills={this.props.seleccion} 
-          reset={this.props.reset}/>
+        <Main
+          funcionfoto={this.props.funcionfoto}
+          foto={this.props.foto}
+          visor={this.props.visor}
+          titulo={this.props.titulos}
+          skills={this.props.seleccion}
+          reset={this.props.reset}
+          changePalette={this.props.changePalette}/>
         <Footer
           copy={this.props.copyright}
           img={this.props.image}

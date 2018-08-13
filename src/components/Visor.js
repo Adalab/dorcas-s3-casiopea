@@ -1,6 +1,12 @@
 import React from "react";
 
 class Visor extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.paletteVisor=this.paletteVisor.bind(this);
+  }
+
   renderMail(mail) {
     if (mail!=='') {
       return (
@@ -45,6 +51,17 @@ class Visor extends React.Component {
       )
     }
   }
+
+  paletteVisor () {
+    let color = "gris";
+    if (this.props.visor.palette == 1) {
+      color = "azul";
+    } else if (this.props.visor.palette == 2) {
+      color = "rojo";
+    }
+    return color;
+  }
+
   render() {
     return (
       <div className="container__visor">
@@ -57,10 +74,10 @@ class Visor extends React.Component {
           </button>
           <div className="card">
             <div className="card__head">
-              <div className="card__head--border">
+              <div className={`card__head--border ${this.paletteVisor()}`}>
                 <div className="card__head--container">
                   <div className="card__name">
-                    <p className="card__name--name" id="element-name">
+                    <p className={`card__name--name ${this.paletteVisor()}`} id="element-name">
                       {this.props.visor.name}
                     </p>
                     <div className="card__job">

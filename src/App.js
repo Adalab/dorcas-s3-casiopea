@@ -40,6 +40,7 @@ class App extends Component {
     this.callApi = this.callApi.bind(this);
     this.cambiarsrc=this.cambiarsrc.bind(this);
     this.reset=this.reset.bind(this);
+    this.changePalette=this.changePalette.bind(this);
   }
 
   componentDidMount () {
@@ -75,6 +76,20 @@ class App extends Component {
     });
   }
 
+  changePalette (e) {
+    const target = e.target;
+    this.setState ((prevState) => {
+      const j = {
+        ...this.state.json,
+        palette: target.value
+      }
+
+    return (
+      {json: j}
+    )
+  });
+  }
+
   reset (){
     this.setState({
       json:{
@@ -89,7 +104,7 @@ class App extends Component {
         "photo": foto,
         "skills": []
       }
-    }) 
+    })
   }
 
 
@@ -111,6 +126,7 @@ class App extends Component {
                     seleccion={this.state.skills}
                     logoAwe={logoAwesome}
                     reset={this.reset}
+                    changePalette={this.changePalette}
                   />}
                 />
         </Switch>
