@@ -9,7 +9,6 @@ class Pag extends React.Component {
     return (
       <div className="container__all">
         <Header img={this.props.logoAwe} />
-<<<<<<< HEAD
         <Main funcionfoto={this.props.funcionfoto}
           foto={this.props.foto}
           visor={this.props.visor}
@@ -22,9 +21,6 @@ class Pag extends React.Component {
           handlerName={this.props.handlerName}
           handlerJob={this.props.handlerJob}
           />
-=======
-        <Main funcionfoto={this.props.funcionfoto} foto={this.props.foto} visor={this.props.visor} titulo={this.props.titulos} skills={this.props.seleccion} />
->>>>>>> ff9fe48478bd9b51a0d915c0f707ffae97a177fe
         <Footer
           copy={this.props.copyright}
           img={this.props.image}

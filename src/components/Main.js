@@ -8,7 +8,6 @@ class Main extends React.Component {
       <div className="container__main">
         <main className="page__main">
           <section className="visor">
-<<<<<<< HEAD
             <Visor funcionfoto={this.props.funcionfoto}
               foto={this.props.foto}
               visor={this.props.visor}
@@ -24,11 +23,6 @@ class Main extends React.Component {
             handlerJob={this.props.handlerJob}
             title={this.props.titulo}
             skills={this.props.skills} />
-=======
-            <Visor funcionfoto={this.props.funcionfoto} foto={this.props.foto} name={this.state.name} job={this.state.job} mail={this.state.mail} phone={this.state.phone} linkedin={this.state.linkedin} github={this.state.github} />
-          </section>
-          <Form funcionfoto={this.props.funcionfoto} foto={this.props.foto} handlerGithub={this.actualizarGithub} handlerLinkedin={this.actualizarLinkedin} handlerPhone={this.actualizarPhone} handlerMail={this.actualizarMail} handlerName={this.actualizarName} handlerJob={this.actualizarJob} title={this.props.titulo} skills={this.props.skills} />
->>>>>>> ff9fe48478bd9b51a0d915c0f707ffae97a177fe
         </main>
       </div>
     );

@@ -12,21 +12,12 @@ class App extends Component {
       json:{
         "palette": 1,
         "typography": 2,
-<<<<<<< HEAD
         name: "Nombre Apellido",
         job: "Descripción",
         phone: "",
         mail:"",
         linkedin: "",
         github: "",
-=======
-        "name" : "Nombre Apellido",
-        "job": "Descripción",
-        "phone": "",
-        "mail": "",
-        "linkedin": "",
-        "github": "",
->>>>>>> ff9fe48478bd9b51a0d915c0f707ffae97a177fe
         "photo": foto,
         "skills": []
       },
@@ -44,15 +35,12 @@ class App extends Component {
       },
       skills: []
     };
-<<<<<<< HEAD
     this.actualizarName=this.actualizarName.bind(this);
     this.actualizarJob=this.actualizarJob.bind(this);
     this.actualizarMail=this.actualizarMail.bind(this);
     this.actualizarPhone=this.actualizarPhone.bind(this);
     this.actualizarLinkedin=this.actualizarLinkedin.bind(this);
     this.actualizarGithub=this.actualizarGithub.bind(this);
-=======
->>>>>>> ff9fe48478bd9b51a0d915c0f707ffae97a177fe
 
     this.callApi = this.callApi.bind(this);
 
@@ -71,7 +59,6 @@ class App extends Component {
     )
   });
   }
-<<<<<<< HEAD
   actualizarName(e){
     const target = e.target;
     this.setState((prevState)=>{
@@ -126,9 +113,6 @@ class App extends Component {
     )
   });
   }
-=======
-
->>>>>>> ff9fe48478bd9b51a0d915c0f707ffae97a177fe
   callApi() {
     fetch(
       "https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json"
