@@ -16,7 +16,10 @@ class Form extends React.Component {
               handlerGithub={this.props.handlerGithub}
               handlerPhone={this.props.handlerPhone}
               handlerName={this.props.handlerName}
-              handlerJob={this.props.handlerJob}/>
+              handlerJob={this.props.handlerJob}
+              visor={this.props.visor}
+              placeholders={this.props.placeholders}
+            />
             <CompComparte tituloComparte={this.props.title.nombreComparte}
             />
           </section>

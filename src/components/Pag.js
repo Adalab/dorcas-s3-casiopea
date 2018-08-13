@@ -24,6 +24,7 @@ class Pag extends React.Component {
           handlerJob={this.props.handlerJob}
           changePalette={this.props.changePalette}
           changeTypography={this.props.changeTypography}
+          placeholders={this.props.placeholders}
           />
         <Footer
           copy={this.props.copyright}

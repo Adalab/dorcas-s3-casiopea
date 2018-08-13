@@ -23,7 +23,7 @@ class CompRellena extends React.Component {
   cambiarsrc2(){
     const url=fr.result;
     this.props.funcionfoto(url);
-  
+
   }
   render(){
     return (
@@ -47,9 +47,10 @@ class CompRellena extends React.Component {
             type="text"
             name="editor-name"
             id="editor-name"
-            placeholder="Ej: Sally Jill"
+            placeholder={this.props.placeholders.nombre}
             data-donde="element-name"
             onChange={this.props.handlerName}
+            value={this.props.visor.name}
           />
         </div>
         <div className="">
@@ -61,9 +62,10 @@ class CompRellena extends React.Component {
             type="text"
             name="editor-role"
             id="editor-role"
-            placeholder="Ej: Front-end unicorn"
+            placeholder={this.props.placeholders.descripcion}
             data-donde="element-role"
             onChange={this.props.handlerJob}
+            value={this.props.visor.job}
           />
         </div>
         <div className="">
@@ -80,7 +82,7 @@ class CompRellena extends React.Component {
                 className="añadir__hiddenField"
                 onChange={this.clickCargarFoto}
               />
-              <input onClick={this.clickSimulado} type="button" value="Enviar" className="añadir__upload-btn" />
+              <input onClick={this.clickSimulado} type="button" value="Cargar foto" className="añadir__upload-btn" />
 
             </div>
             <div className="mini" style={{backgroundImage:'url(' + this.props.foto + ')'}}></div>
@@ -97,9 +99,10 @@ class CompRellena extends React.Component {
               className="fieldset__rellena--input fieldset__rellena--input-email"
               type="email"
               name="email"
-              placeholder="Ej: sally-hill@gmail.com"
+              placeholder={this.props.placeholders.email}
               autoComplete="email"
               onChange={this.props.handlerMail}
+              value={this.props.visor.mail}
             />
           </div>
           <div className="">
@@ -110,9 +113,10 @@ class CompRellena extends React.Component {
               className="fieldset__rellena--input fieldset__rellena--input-mobile"
               type="phone"
               name="telefono"
-              placeholder="Ej: +34 555-55-55-55"
+              placeholder={this.props.placeholders.telefono}
               autoComplete="tel-national"
               onChange={this.props.handlerPhone}
+              value={this.props.visor.phone}
             />
           </div>
           <div className="">
@@ -123,8 +127,9 @@ class CompRellena extends React.Component {
               className="fieldset__rellena--input fieldset__rellena--input-linkedin"
               type="text"
               name="linkedin"
-              placeholder="Ej: linkedin.com/in/Sally.hill"
+              placeholder={this.props.placeholders.linkedin}
               onChange={this.props.handlerLinkedin}
+              value={this.props.visor.linkedin}
             />
           </div>
           <div className="">
@@ -135,8 +140,9 @@ class CompRellena extends React.Component {
               className="fieldset__rellena--input fieldset__rellena--input-github"
               type="text"
               name="github"
-              placeholder="Ej: sally-hill"
+              placeholder={this.props.placeholders.github}
               onChange={this.props.handlerGithub}
+              value={this.props.visor.github}
             />
           </div>
         </div>

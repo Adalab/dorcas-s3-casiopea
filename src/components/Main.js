@@ -25,7 +25,10 @@ class Main extends React.Component {
             skills={this.props.skills}
             changePalette={this.props.changePalette}
             visor={this.props.visor}
-            changeTypography={this.props.changeTypography} />
+            changeTypography={this.props.changeTypography}
+            placeholders={this.props.placeholders}
+
+           />
         </main>
       </div>
     );

@@ -22,6 +22,14 @@ class App extends Component {
         "photo": foto,
         "skills": []
       },
+      placeholders:{
+        nombre:"Ej: Sally Jill",
+        descripcion:"Ej: Front-end unicorn",
+        email:"Ej: sally-hill@gmail.com",
+        telefono:"Ej: +34 555-55-55-55",
+        linkedin:"Ej: linkedin.com/in/Sally.hill",
+        github:"Ej: sally-hill"
+      },
       footer: {
         texto: "Awesome profile-cards ©2018",
         image: logoAda,
@@ -50,6 +58,19 @@ class App extends Component {
 
   componentDidMount () {
     this.callApi();
+    this.LocalStorage();
+  }
+  LocalStorage() {
+    if (localStorage.getItem('localStorage')) {
+      const stateStorage = JSON.parse(localStorage.getItem('localStorage'));
+      const json = stateStorage;
+      this.setState({
+        json: json
+      })
+    }
+  }
+  saveStorage(){
+    localStorage.setItem("localStorage", JSON.stringify(this.state.json));
   }
 
   cambiarsrc(rutafoto){
@@ -64,6 +85,7 @@ class App extends Component {
       {json: j}
     )
   });
+  this.saveStorage();
   }
   actualizarName(e){
     const target = e.target;
@@ -73,6 +95,7 @@ class App extends Component {
       {json: a}
     )
   });
+  this.saveStorage();
   }
   actualizarJob(e){
     const target = e.target;
@@ -82,6 +105,7 @@ class App extends Component {
       {json: a}
     )
   });
+  this.saveStorage();
   }
   actualizarMail(e){
     const target = e.target;
@@ -91,6 +115,7 @@ class App extends Component {
       {json: a
     })
   });
+  this.saveStorage();
   }
   actualizarPhone(e){
     const target = e.target;
@@ -100,6 +125,7 @@ class App extends Component {
       {json: a}
     )
   });
+  this.saveStorage();
   }
   actualizarLinkedin(e){
     const target = e.target;
@@ -109,6 +135,7 @@ class App extends Component {
       {json: a}
     )
   });
+  this.saveStorage();
   }
   actualizarGithub(e){
     const target = e.target;
@@ -118,6 +145,7 @@ class App extends Component {
       {json: a}
     )
   });
+  this.saveStorage();
   }
   callApi() {
     fetch(
@@ -132,6 +160,7 @@ class App extends Component {
         skills: habilidades
       });
     });
+    this.saveStorage();
   }
 
   changePalette (e) {
@@ -146,6 +175,7 @@ class App extends Component {
      {json: j}
    )
  });
+ this.saveStorage();
  }
 
  changeTypography (e) {
@@ -160,6 +190,7 @@ class App extends Component {
     {json: j}
   )
 });
+this.saveStorage();
 }
 
   reset (){
@@ -176,7 +207,9 @@ class App extends Component {
         "photo": foto,
         "skills": []
       }
+
     })
+    localStorage.clear();
   }
 
 
@@ -206,6 +239,7 @@ class App extends Component {
                     handlerJob={this.actualizarJob}
                     changePalette={this.changePalette}
                     changeTypography={this.changeTypography}
+                    placeholders={this.state.placeholders}
                   />}
                 />
         </Switch>

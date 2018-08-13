@@ -99,7 +99,7 @@ class Visor extends React.Component {
                     </p>
                     <div className="card__job">
                       <p className={`card__job--job ${this.typographyVisor()}`} id="element-role">
-                      {this.props.visor.job}
+                      {this.props.visor.job} 
                       </p>
                     </div>
                   </div>
