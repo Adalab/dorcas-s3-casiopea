@@ -38,8 +38,11 @@ class App extends Component {
     };
 
     this.callApi = this.callApi.bind(this);
-
     this.cambiarsrc=this.cambiarsrc.bind(this);
+    this.reset=this.reset.bind(this);
+  }
+
+  componentDidMount () {
     this.callApi();
   }
 
@@ -72,6 +75,25 @@ class App extends Component {
     });
   }
 
+  reset (){
+    this.setState({
+      json:{
+        "palette": 1,
+        "typography": 2,
+        "name" : "Nombre Apellido",
+        "job": "Descripción",
+        "phone": "",
+        "mail": "",
+        "linkedin": "",
+        "github": "",
+        "photo": foto,
+        "skills": []
+      }
+    }) 
+  }
+
+
+
   render() {
     return (
       <div className="App">
@@ -88,6 +110,7 @@ class App extends Component {
                     titulos={this.state.form.titulos}
                     seleccion={this.state.skills}
                     logoAwe={logoAwesome}
+                    reset={this.reset}
                   />}
                 />
         </Switch>
