@@ -49,7 +49,7 @@ class Visor extends React.Component {
     return (
       <div className="container__visor">
         <section className="visor">
-          <button className="reset">
+          <button className="reset" onClick={this.props.reset} >
             <div className="reset__icon">
               <i className="far fa-trash-alt" />
             </div>
@@ -61,26 +61,26 @@ class Visor extends React.Component {
                 <div className="card__head--container">
                   <div className="card__name">
                     <p className="card__name--name" id="element-name">
-                      {this.props.name}
+                      {this.props.visor.name}
                     </p>
                     <div className="card__job">
                       <p className="card__job--job" id="element-role">
-                        {this.props.job}
+                        {this.props.visor.job}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="card__pic" style={{backgroundImage:'url(' + this.props.foto + ')'}} >
+            <div className="card__pic" style={{backgroundImage:'url(' + this.props.visor.photo + ')'}} >
             </div>
 
             <div className="card__foot">
               <div className="card__foot--social">
-                {this.renderPhone(this.props.phone)}
-                {this.renderMail(this.props.mail)}
-                {this.renderLinkedin(this.props.linkedin)}
-                {this.renderGithub(this.props.github)}
+                {this.renderPhone(this.props.visor.phone)}
+                {this.renderMail(this.props.visor.mail)}
+                {this.renderLinkedin(this.props.visor.linkedin)}
+                {this.renderGithub(this.props.visor.github)}
               </div>
               <div className="card__foot--skills" />
             </div>
