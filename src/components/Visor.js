@@ -4,9 +4,10 @@ import "../styles/main.css";
 class Visor extends React.Component {
   renderMail(mail) {
     if(mail !== ''){
+      const hrefMail = "mailto:" + mail;
     return (
         <div className="card__foot--icon email">
-          <a href="" className="emailLink">
+          <a href={hrefMail} className="emailLink">
             <i className="iconsocial far fa-envelope" />
           </a>
         </div>
@@ -15,9 +16,10 @@ class Visor extends React.Component {
   }
   renderPhone(phone){
     if(phone!==""){
+      const hrefTel = "mailto:" + phone;
       return(
         <div className="card__foot--icon mobile">
-          <a href="" className="mobileLink">
+          <a href={hrefTel} className="mobileLink">
             <i className="iconsocial fas fa-mobile-alt" />
           </a>
         </div>
@@ -26,9 +28,10 @@ class Visor extends React.Component {
   }
   renderLinkedin(linkedin){
     if(linkedin!==""){
+      const hrefLinkedin = "https://linkedin.com/in/" + linkedin;
       return(
         <div className="card__foot--icon linkedin">
-          <a href="" className="linkedinLink">
+          <a href={hrefLinkedin} className="linkedinLink">
             <i className="iconsocial fab fa-linkedin-in" />
           </a>
         </div>
@@ -37,9 +40,10 @@ class Visor extends React.Component {
   }
   renderGithub(github){
     if(github!==""){
+      const hrefGithub = "https://github.com/" + github;
       return(
         <div className="card__foot--icon github">
-          <a href="" className="githubLink">
+          <a href={hrefGithub} className="githubLink">
             <i className="iconsocial fab fa-github-alt" />
           </a>
         </div>

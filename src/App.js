@@ -15,7 +15,7 @@ class App extends Component {
         name: "Nombre Apellido",
         job: "Descripción",
         phone: "",
-        mail: "",
+        mail:"",
         linkedin: "",
         github: "",
         "photo": foto,
@@ -82,8 +82,8 @@ class App extends Component {
     this.setState((prevState)=>{
       const a = Object.assign({}, this.state.json, {mail: target.value});
     return (
-      {json: a}
-    )
+      {json: a
+    })
   });
   }
   actualizarPhone(e){
